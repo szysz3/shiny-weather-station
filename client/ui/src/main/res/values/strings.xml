@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">ShinyStationFrame</string>
+
+    <string name="no_data_alert_text">No data available. Check your internet connection.</string>
+    <string name="no_data_alert_title_text">Something went wrong!</string>
+    <string name="no_data_alert_positive_btn">Retry</string>
+    <string name="pressure_header_text">PRESSURE</string>
+    <string name="humidity_header_text">HUMIDITY</string>
+    <string name="pm_10_header_text">PM 10</string>
+    <string name="pm_25_header_text">PM 2.5</string>
+    <string name="day_forecast_icon_desc">day forecast icon</string>
+    <string name="hour_forecast_icon_desc">hour forecast icon</string>
+
+    <string name="caqi_good_title">good</string>
+    <string name="caqi_moderate_title">moderate</string>
+    <string name="caqi_unhealthy_for_sensitive_title">unhealthy for sensitive people</string>
+    <string name="caqi_unhealthy_title">unhealthy</string>
+    <string name="caqi_very_unhealthy_title">very unhealthy</string>
+    <string name="caqi_hazardous_title">hazardous</string>
+    <string name="caqi_dead_title">dead</string>
+
+    <string name="caqi_good">no health implications</string>
+    <string name="caqi_moderate">some pollutants may slightly affect hypersensitive individuals</string>
+    <string name="caqi_unhealthy_for_sensitive">some pollutants may affect sensitive individuals</string>
+    <string name="caqi_unhealthy">children, seniors and individuals with respiratory or heart diseases should avoid outdoor exercises</string>
+    <string name="caqi_very_unhealthy">general population should reduce outdoor activities</string>
+    <string name="caqi_hazardous">general population should avoid outdoor activities</string>
+    <string name="caqi_dead">let\'s hope sensor is dead..</string>
+    <string name="alarm_day_monday">monday</string>
+    <string name="alarm_day_tuesday">tuesday</string>
+    <string name="alarm_day_wednesday">wednesday</string>
+    <string name="alarm_day_thursday">thursday</string>
+    <string name="alarm_day_friday">friday</string>
+    <string name="alarm_day_saturday">saturday</string>
+    <string name="alarm_day_sunday">sunday</string>
+    <string name="missing_data_text">\?</string>
+</resources>

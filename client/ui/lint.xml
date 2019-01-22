@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/icon_01d.png" />
+        <ignore path="src/main/res/drawable/icon_01n.png" />
+        <ignore path="src/main/res/drawable/icon_02d.png" />
+        <ignore path="src/main/res/drawable/icon_02n.png" />
+        <ignore path="src/main/res/drawable/icon_03d.png" />
+        <ignore path="src/main/res/drawable/icon_03n.png" />
+        <ignore path="src/main/res/drawable/icon_04d.png" />
+        <ignore path="src/main/res/drawable/icon_04n.png" />
+        <ignore path="src/main/res/drawable/icon_09d.png" />
+        <ignore path="src/main/res/drawable/icon_09n.png" />
+        <ignore path="src/main/res/drawable/icon_10d.png" />
+        <ignore path="src/main/res/drawable/icon_10n.png" />
+        <ignore path="src/main/res/drawable/icon_11d.png" />
+        <ignore path="src/main/res/drawable/icon_11n.png" />
+        <ignore path="src/main/res/drawable/icon_13d.png" />
+        <ignore path="src/main/res/drawable/icon_13n.png" />
+        <ignore path="src/main/res/drawable/icon_50d.png" />
+        <ignore path="src/main/res/drawable/icon_50n.png" />
+    </issue>
+    <issue id="UnusedResources">
+        <ignore path="src/main/res/drawable/icon_01n.png" />
+        <ignore path="src/main/res/drawable/icon_02d.png" />
+        <ignore path="src/main/res/drawable/icon_02n.png" />
+        <ignore path="src/main/res/drawable/icon_03d.png" />
+        <ignore path="src/main/res/drawable/icon_03n.png" />
+        <ignore path="src/main/res/drawable/icon_04d.png" />
+        <ignore path="src/main/res/drawable/icon_04n.png" />
+        <ignore path="src/main/res/drawable/icon_09d.png" />
+        <ignore path="src/main/res/drawable/icon_09n.png" />
+        <ignore path="src/main/res/drawable/icon_10d.png" />
+        <ignore path="src/main/res/drawable/icon_10n.png" />
+        <ignore path="src/main/res/drawable/icon_11d.png" />
+        <ignore path="src/main/res/drawable/icon_11n.png" />
+        <ignore path="src/main/res/drawable/icon_13d.png" />
+        <ignore path="src/main/res/drawable/icon_13n.png" />
+        <ignore path="src/main/res/drawable/icon_50d.png" />
+        <ignore path="src/main/res/drawable/icon_50n.png" />
+    </issue>
+</lint>

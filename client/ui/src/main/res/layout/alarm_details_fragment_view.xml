@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clickable="true"
+    android:padding="@dimen/alarm_page_padding"
+    tools:ignore="KeyboardInaccessibleWidget">
+
+    <ImageView
+        android:id="@+id/back_image"
+        android:layout_width="@dimen/image_button_size_medium"
+        android:layout_height="@dimen/image_button_size_medium"
+        android:layout_margin="@dimen/card_content_margin_ultra_huge"
+        android:alpha="0.7"
+        android:clickable="true"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/save_image"
+        android:layout_width="@dimen/image_button_size_big"
+        android:layout_height="@dimen/image_button_size_big"
+        android:layout_margin="@dimen/card_content_margin_ultra_huge"
+        android:alpha="0.5"
+        android:clickable="true"
+        android:src="@drawable/tick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/timepicker_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/card_content_margin_ultra_huge">
+
+            <com.pinetreeapps.timepicker.TimePicker
+                android:id="@+id/time_picker"
+                android:layout_width="270dp"
+                android:layout_height="300dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/top_gradient"
+                android:layout_width="270dp"
+                android:layout_height="170dp"
+                android:background="@drawable/gradient_top"
+                app:layout_constraintLeft_toLeftOf="@id/time_picker"
+                app:layout_constraintRight_toRightOf="@id/time_picker"
+                app:layout_constraintTop_toTopOf="@id/time_picker" />
+
+            <View
+                android:id="@+id/bottom_gradient"
+                android:layout_width="270dp"
+                android:layout_height="170dp"
+                android:background="@drawable/gradient_bottom"
+                app:layout_constraintBottom_toBottomOf="@id/time_picker"
+                app:layout_constraintLeft_toLeftOf="@id/time_picker"
+                app:layout_constraintRight_toRightOf="@id/time_picker" />
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/card_content_margin_ultra_huge"
+            android:orientation="vertical">
+
+            <com.pinetreeapps.shinystationframe.widget.FuturaCheckBox
+                android:id="@+id/monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:layout_marginBottom="@dimen/card_content_margin"
+                android:button="@drawable/selector_checkbox"
+                android:paddingLeft="@dimen/alarm_day_padding"
+                android:text="@string/alarm_day_monday"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/font_size_30" />
+
+            <com.pinetreeapps.shinystationframe.widget.FuturaCheckBox
+                android:id="@+id/tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:layout_marginBottom="@dimen/card_content_margin"
+                android:button="@drawable/selector_checkbox"
+                android:paddingLeft="14dp"
+                android:text="@string/alarm_day_tuesday"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/font_size_30" />
+
+            <com.pinetreeapps.shinystationframe.widget.FuturaCheckBox
+                android:id="@+id/wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:layout_marginBottom="@dimen/card_content_margin"
+                android:button="@drawable/selector_checkbox"
+                android:paddingLeft="@dimen/alarm_day_padding"
+                android:text="@string/alarm_day_wednesday"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/font_size_30" />
+
+            <com.pinetreeapps.shinystationframe.widget.FuturaCheckBox
+                android:id="@+id/thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:layout_marginBottom="@dimen/card_content_margin"
+                android:button="@drawable/selector_checkbox"
+                android:paddingLeft="@dimen/alarm_day_padding"
+                android:text="@string/alarm_day_thursday"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/font_size_30" />
+
+            <com.pinetreeapps.shinystationframe.widget.FuturaCheckBox
+                android:id="@+id/friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:layout_marginBottom="@dimen/card_content_margin"
+                android:button="@drawable/selector_checkbox"
+                android:paddingLeft="@dimen/alarm_day_padding"
+                android:text="@string/alarm_day_friday"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/font_size_30" />
+
+            <com.pinetreeapps.shinystationframe.widget.FuturaCheckBox
+                android:id="@+id/saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:layout_marginBottom="@dimen/card_content_margin"
+                android:button="@drawable/selector_checkbox"
+                android:paddingLeft="@dimen/alarm_day_padding"
+                android:text="@string/alarm_day_saturday"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/font_size_30" />
+
+            <com.pinetreeapps.shinystationframe.widget.FuturaCheckBox
+                android:id="@+id/sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:layout_marginBottom="@dimen/card_content_margin"
+                android:button="@drawable/selector_checkbox"
+                android:paddingLeft="@dimen/alarm_day_padding"
+                android:text="@string/alarm_day_sunday"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/font_size_30" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

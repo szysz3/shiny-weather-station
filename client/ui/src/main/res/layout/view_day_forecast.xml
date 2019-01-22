@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <LinearLayout
+        android:id="@+id/day_forecast_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        app:layout_constraintBottom_toTopOf="@+id/day_forecast_separator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+            android:id="@+id/day_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.3"
+            android:gravity="start"
+            android:textSize="@dimen/font_size_20" />
+
+        <ImageView
+            android:id="@+id/day_forecast_icon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/day_forecast_icon_desc" />
+
+        <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+            android:id="@+id/day_forecast_max_temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/arrow_up_icon"
+            android:textSize="@dimen/font_size_20" />
+
+        <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+            android:id="@+id/day_forecast_min_temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/arrow_down_icon"
+            android:textSize="@dimen/font_size_20" />
+    </LinearLayout>
+
+    <View
+        android:id="@id/day_forecast_separator"
+        style="@style/HorizontalSeparator"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/day_forecast_container" />
+
+</android.support.constraint.ConstraintLayout>

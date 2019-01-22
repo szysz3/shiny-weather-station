@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/temp_card_view"
+            style="@style/Card"
+            android:layout_marginLeft="@dimen/card_margin_16"
+            android:layout_marginTop="@dimen/card_margin_16"
+            android:layout_marginRight="@dimen/card_margin_8"
+            android:layout_marginBottom="@dimen/card_margin_8"
+            app:layout_constraintBottom_toTopOf="@+id/humidity_cardview"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/vertical_guideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@+id/current_temp_text"
+                    style="@style/Wrap"
+                    android:text="@string/missing_data_text"
+                    android:textColor="@color/white_50"
+                    android:textSize="@dimen/font_size_70"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/temp_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@id/temp_icon"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:src="@drawable/icon_01d"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/current_temp_text"
+                    app:layout_constraintRight_toLeftOf="@+id/caqi_vertical_separator"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <View
+                    android:id="@id/caqi_vertical_separator"
+                    style="@style/VerticalSeparator"
+                    android:layout_marginLeft="@dimen/card_content_margin"
+                    android:layout_marginRight="@dimen/card_content_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/caqi_value"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@id/caqi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_content_margin"
+                    android:background="#ff00ff00"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/temp_icon"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                        android:id="@+id/caqi_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/card_content_margin_huge"
+                        android:layout_marginRight="@dimen/card_content_margin_huge"
+                        android:gravity="center"
+                        android:text="@string/missing_data_text"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/font_size_50" />
+                </FrameLayout>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.constraint.Guideline
+            android:id="@id/vertical_guideline"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/day_forecast_cardview"
+            style="@style/Card"
+            android:layout_marginLeft="@dimen/card_margin_8"
+            android:layout_marginTop="@dimen/card_margin_16"
+            android:layout_marginRight="@dimen/card_margin_16"
+            app:layout_constraintBottom_toBottomOf="@+id/pm10_card_view"
+            app:layout_constraintLeft_toRightOf="@id/vertical_guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/day_forecast_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/pressure_cardview"
+            style="@style/Card.Left"
+            android:layout_marginLeft="@dimen/card_margin_16"
+            android:layout_marginRight="@dimen/card_margin_8"
+            app:layout_constraintBottom_toBottomOf="@id/humidity_cardview"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/humidity_cardview"
+            app:layout_constraintTop_toTopOf="@id/humidity_cardview">
+
+            <android.support.constraint.ConstraintLayout style="@style/MatchParent">
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@+id/pressure_header"
+                    style="@style/CardHeader"
+                    android:text="@string/pressure_header_text"
+                    app:layout_constraintBottom_toTopOf="@id/pressure_separator"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/pressure_separator"
+                    style="@style/HorizontalSeparator"
+                    app:layout_constraintBottom_toTopOf="@id/pressure_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pressure_header" />
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@+id/pressure_text"
+                    style='@style/SmallCardText'
+                    android:text="@string/missing_data_text"
+                    android:textSize="@dimen/font_size_30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pressure_separator" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@id/humidity_cardview"
+            style="@style/Card.Right"
+            android:layout_marginLeft="@dimen/card_margin_8"
+            android:layout_marginTop="@dimen/card_margin_8"
+            android:layout_marginRight="@dimen/card_margin_8"
+            android:layout_marginBottom="@dimen/card_margin_8"
+            app:layout_constraintBottom_toTopOf="@id/pm10_card_view"
+            app:layout_constraintLeft_toRightOf="@id/pressure_cardview"
+            app:layout_constraintRight_toLeftOf="@id/vertical_guideline"
+            app:layout_constraintTop_toBottomOf="@id/temp_card_view">
+
+            <android.support.constraint.ConstraintLayout style="@style/MatchParent">
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@+id/humidity_header"
+                    style="@style/CardHeader"
+                    android:text="@string/humidity_header_text"
+                    app:layout_constraintBottom_toTopOf="@id/humidity_separator"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/humidity_separator"
+                    style="@style/HorizontalSeparator"
+                    app:layout_constraintBottom_toTopOf="@id/humidity_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/humidity_header" />
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@+id/humidity_text"
+                    style='@style/SmallCardText'
+                    android:text="@string/missing_data_text"
+                    android:textSize="@dimen/font_size_30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/humidity_separator" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@id/pm10_card_view"
+            style="@style/Card"
+            android:layout_marginLeft="@dimen/card_margin_16"
+            android:layout_marginTop="@dimen/card_margin_8"
+            android:layout_marginRight="@dimen/card_margin_8"
+            android:layout_marginBottom="@dimen/card_margin_8"
+            app:layout_constraintBottom_toTopOf="@+id/hour_forecast_card_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/pm25_card_view"
+            app:layout_constraintTop_toBottomOf="@id/humidity_cardview">
+
+            <android.support.constraint.ConstraintLayout style="@style/MatchParent">
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@+id/pm10_header"
+                    style="@style/CardHeader"
+                    android:text="@string/pm_10_header_text"
+                    app:layout_constraintBottom_toTopOf="@+id/pm10_separator"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@id/pm10_separator"
+                    style="@style/HorizontalSeparator"
+                    app:layout_constraintBottom_toTopOf="@+id/pm10_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pm10_header" />
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@id/pm10_text"
+                    style='@style/SmallCardText'
+                    android:gravity="center_horizontal"
+                    android:text="@string/missing_data_text"
+                    android:textSize="@dimen/font_size_30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/pm10_internal_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pm10_separator" />
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@id/pm10_internal_text"
+                    style='@style/SmallCardText'
+                    android:layout_marginEnd="@dimen/card_margin_8"
+                    android:gravity="center_horizontal"
+                    android:text="@string/missing_data_text"
+                    android:textSize="@dimen/font_size_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/pm10_text" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@id/pm25_card_view"
+            style="@style/Card"
+            android:layout_marginLeft="@dimen/card_margin_8"
+            android:layout_marginRight="@dimen/card_margin_8"
+            app:layout_constraintBottom_toBottomOf="@id/pm10_card_view"
+            app:layout_constraintLeft_toRightOf="@id/pm10_card_view"
+            app:layout_constraintRight_toLeftOf="@id/vertical_guideline"
+            app:layout_constraintTop_toTopOf="@id/pm10_card_view">
+
+            <android.support.constraint.ConstraintLayout style="@style/MatchParent">
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@+id/pm25_header"
+                    style="@style/CardHeader"
+                    android:text="@string/pm_25_header_text"
+                    app:layout_constraintBottom_toTopOf="@+id/pm25_separator"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/pm25_separator"
+                    style="@style/HorizontalSeparator"
+                    app:layout_constraintBottom_toTopOf="@+id/pm25_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pm25_header" />
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@id/pm25_text"
+                    style='@style/SmallCardText'
+                    android:gravity="center_horizontal"
+                    android:text="@string/missing_data_text"
+                    android:textSize="@dimen/font_size_30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/pm25_internal_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pm25_separator" />
+
+                <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+                    android:id="@id/pm25_internal_text"
+                    style='@style/SmallCardText'
+                    android:gravity="center_horizontal"
+                    android:text="@string/missing_data_text"
+                    android:textSize="@dimen/font_size_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/pm25_text" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@id/hour_forecast_card_view"
+            style="@style/Card"
+            android:layout_marginLeft="@dimen/card_margin_16"
+            android:layout_marginTop="@dimen/card_margin_16"
+            android:layout_marginRight="@dimen/card_margin_16"
+            android:layout_marginBottom="@dimen/card_margin_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pm10_card_view">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/hour_forecast_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="DefaultNumberPickerTheme" parent="AppTheme">
+        <item name="colorControlNormal">#00000000</item>
+        <item name="android:textColorPrimary">@color/dividerColor</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:textColor">@color/dividerColor</item>
+    </style>
+</resources>

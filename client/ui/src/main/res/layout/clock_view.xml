@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.pinetreeapps.numbertweening.widget.NumberView
+            android:id="@+id/hourNumber1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.pinetreeapps.numbertweening.widget.NumberView
+            android:id="@+id/hourNumber2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <com.pinetreeapps.numbertweening.widget.NumberView
+            android:id="@+id/minuteNumber1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.pinetreeapps.numbertweening.widget.NumberView
+            android:id="@+id/minuteNumber2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:alpha="0.5"
+        android:background="#11ffffff"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintTop_toBottomOf="@id/main">
+
+        <com.pinetreeapps.numbertweening.widget.NumberView
+            android:id="@+id/secondNumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.pinetreeapps.numbertweening.widget.NumberView
+            android:id="@+id/secondNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

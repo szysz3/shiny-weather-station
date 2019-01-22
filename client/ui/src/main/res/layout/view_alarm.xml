@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/image_button_size_medium"
+        android:layout_height="@dimen/image_button_size_medium"
+        android:layout_gravity="center_vertical|right"
+        android:src="@drawable/cross"
+        tools:ignore="ContentDescription" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/foreground_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+            android:id="@+id/alarm_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white_100_a"
+            android:textSize="@dimen/font_size_50"
+            app:layout_constraintBottom_toTopOf="@+id/alarm_days"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.pinetreeapps.shinystationframe.widget.FuturaTextView
+            android:id="@id/alarm_days"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/alarm_item_margin"
+            android:textColor="@color/white_100_a"
+            android:textSize="@dimen/font_size_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alarm_time"
+            app:layout_constraintWidth_min="@dimen/alarm_item_min_width" />
+
+        <FrameLayout
+            android:id="@+id/disabled_alarm_overlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.5"
+            android:background="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/alarm_days"
+            app:layout_constraintLeft_toLeftOf="@id/alarm_time"
+            app:layout_constraintRight_toLeftOf="@+id/alarm_enabled"
+            app:layout_constraintTop_toTopOf="@id/alarm_time" />
+
+        <ImageView
+            android:id="@+id/alarm_enabled"
+            android:layout_width="@dimen/alarm_tick_button_size"
+            android:layout_height="@dimen/alarm_tick_button_size"
+            android:layout_margin="@dimen/switch_margin"
+            android:alpha="0.5"
+            android:src="@drawable/tick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>
