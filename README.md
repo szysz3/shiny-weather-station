@@ -12,9 +12,16 @@ Backend constists of 3 docker containers:
 * [sensors, apache and REST API](https://github.com/szysz3/shiny-weather-station/tree/master/backend/webservice) ([Flask](http://flask.pocoo.org) and some python scripts for reading data from sensors)
 
 ### backend (Raspberry Pi 3 B)
-![RPI](https://imgur.com/a/hvDfoDq)
+![RPI](https://i.imgur.com/QElSfV2.jpg)
 
 ### client (Nexus 7 with Android 6.0.1)
+
+Simple Android app with three modes:
+* clock / alarm clock
+* weather data
+* photo frame
+
+[youtube video](https://youtu.be/_AMYQHY-znQ)
 
 ## setup
 
@@ -66,4 +73,4 @@ web_1                 |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit
 
 > private const val BASE_URL = "[PUT YOUR RPI WEATHER STATION IP HERE]"
 
-e.g `private const val BASE_URL = "https://192.168.137.148:5000"`
+e.g `private const val BASE_URL = "http://192.168.137.148:5000"`
