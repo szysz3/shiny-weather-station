@@ -4,6 +4,8 @@
 
 **shiny-weather-station** was developed and tested on Raspberry Pi 3 B (backend) and Nexus 7 (client) with Android 6.0.1 (AOSP build with removed SystemUI). 
 
+### backend (Raspberry Pi 3 B)
+
 Backend constists of 3 docker containers: 
 * [db](https://github.com/szysz3/shiny-weather-station/tree/master/backend/db) (PostgreSQL), 
 
@@ -11,14 +13,16 @@ Backend constists of 3 docker containers:
 
 * [sensors, apache and REST API](https://github.com/szysz3/shiny-weather-station/tree/master/backend/webservice) ([Flask](http://flask.pocoo.org) and some python scripts for reading data from sensors)
 
-### backend (Raspberry Pi 3 B)
 ![RPI](https://i.imgur.com/QElSfV2.jpg)
 
 ### client (Nexus 7 with Android 6.0.1)
 
 Simple Android app with three modes:
 * clock / alarm clock
-* weather data
+* weather data 
+  * forecast from Open Weather, 
+  * outdoor PM10\PM2.5 values from Airly, 
+  * indoor humidity, pressure, temparature, PM10\PM2.5 values
 * photo frame
 
 ![clock](https://i.imgur.com/TWmcUA4.png)
@@ -28,7 +32,7 @@ Simple Android app with three modes:
 ![alarm clock](https://i.imgur.com/pSlrnM2.png)
 
 
-[youtube video](https://youtu.be/fz_Qo0Fml2M)
+.. and [youtube video.](https://youtu.be/fz_Qo0Fml2M)
 
 ## setup
 
