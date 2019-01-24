@@ -21,7 +21,14 @@ Simple Android app with three modes:
 * weather data
 * photo frame
 
-[youtube video](https://youtu.be/_AMYQHY-znQ)
+![clock](https://i.imgur.com/TWmcUA4.png)
+
+![weather](https://i.imgur.com/oLKhmVH.png)
+
+![alarm clock](https://i.imgur.com/pSlrnM2.png)
+
+
+[youtube video](https://youtu.be/fz_Qo0Fml2M)
 
 ## setup
 
