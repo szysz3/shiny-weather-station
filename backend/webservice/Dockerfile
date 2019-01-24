@@ -22,4 +22,4 @@ RUN git clone https://github.com/adafruit/Adafruit_Python_DHT \
     && cd Adafruit_Python_DHT && python setup.py install
 EXPOSE 5000 80
 ENV HOST_IP_ADDR=%HOST_IP_ADDR%
-CMD ["./start.sh"]
+CMD ["sh", "start.sh"]
