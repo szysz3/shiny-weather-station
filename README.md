@@ -37,21 +37,21 @@ Simple Android app with three modes:
 ## setup
 
 ### backend
-1. make sure you have enabled SPI, I2C if not please do so with:
+**1.** make sure you have enabled SPI, I2C if not please do so with:
 ```
 sudo raspi-config
 ```
-2. make sure you have [docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/) installed. If not please install both with:
+**2.** make sure you have [docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/) installed. If not please install both with:
 ```
 curl -sSL https://get.docker.com | sh
 sudo usermod -aG docker $USER 
 sudo pip install docker-compose
 ````
-3. download sources with:
+**3.** download sources with:
 ```
 git clone -b release/1.0 https://github.com/szysz3/shiny-weather-station.git && chmod +x shiny-weather-station/backend/run.sh
 ```
-4. provide valid API keys, latitude, longitude and city name:
+**4.** provide valid API keys, latitude, longitude and city name:
 ```
 nano shiny-weather-station/backend/refresh_weather_conditions/Dockerfile
 ```
@@ -64,12 +64,12 @@ Get Airly API key [here](https://developer.airly.eu/register)
 
 Get Open Weather Map API key [here](https://home.openweathermap.org/users/sign_up)
 
-5. build and run containers with:
+**5.** build and run containers with:
 ```
 cd shiny-weather-station/backend && ./run.sh
 ```
 
-6. after a while containers should be up and running:
+**6.** after a while containers should be up and running:
 ```
 web_1                 |  * Serving Flask app "webservice.py"
 web_1                 |  * Environment: production
@@ -80,7 +80,7 @@ web_1                 |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit
 ```
 
 ### client
-1. edit and replace `BASE_URL` with IP address of your RaspberryPi
+**1.** edit and replace `BASE_URL` with IP address of your RaspberryPi
 
 > private const val BASE_URL = "[PUT YOUR RPI WEATHER STATION IP HERE]"
 
@@ -92,8 +92,6 @@ This project is licensed under the MIT license. See the [LICENSE](https://github
 
 ### notes
 
-[blurkit](https://github.com/szysz3/shiny-weather-station/tree/master/client/blurkit) module inspired by [blurkit-android](https://github.com/CameraKit/blurkit-android)
-
-[numbertweening](https://github.com/szysz3/shiny-weather-station/tree/master/client/numbertweening) based on [ios-numbertweening](https://github.com/szysz3/ios-numbertweening)
-
-Nova Fitness SDS011 sensor reading based on [sds011](https://gist.github.com/kadamski/92653913a53baf9dd1a8)
+* [blurkit](https://github.com/szysz3/shiny-weather-station/tree/master/client/blurkit) module inspired by [blurkit-android](https://github.com/CameraKit/blurkit-android)
+* [numbertweening](https://github.com/szysz3/shiny-weather-station/tree/master/client/numbertweening) based on [ios-numbertweening](https://github.com/szysz3/ios-numbertweening)
+* Nova Fitness SDS011 sensor reading based on [sds011](https://gist.github.com/kadamski/92653913a53baf9dd1a8)
