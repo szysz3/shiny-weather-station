@@ -4,7 +4,7 @@
 
 **shiny-weather-station** was developed and tested on Raspberry Pi 3 B (backend) and Nexus 7 (client) with Android 6.0.1 (AOSP build with SystemUI removed). 
 
-### backend (Raspberry Pi 3 B)
+### :arrow_forward: backend (Raspberry Pi 3 B)
 
 Backend constists of 3 docker containers: 
 * [db](https://github.com/szysz3/shiny-weather-station/tree/master/backend/db) (PostgreSQL), 
@@ -15,7 +15,7 @@ Backend constists of 3 docker containers:
 
 ![RPI](https://i.imgur.com/QElSfV2.jpg)
 
-### client (Nexus 7 with Android 6.0.1)
+### :arrow_forward: client (Nexus 7 with Android 6.0.1)
 
 Simple Android app with three modes:
 * clock / alarm clock
@@ -36,7 +36,7 @@ Simple Android app with three modes:
 
 ## :cloud: setup
 
-### backend
+### :arrow_forward: backend
 **1.** make sure you have enabled SPI, I2C if not please do so with:
 ```
 sudo raspi-config
@@ -79,7 +79,7 @@ web_1                 |  * Debug mode: off
 web_1                 |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ```
 
-### client
+### :arrow_forward: client
 **1.** edit and replace `BASE_URL` with IP address of your RaspberryPi
 
 > private const val BASE_URL = "[PUT YOUR RPI WEATHER STATION IP HERE]"
