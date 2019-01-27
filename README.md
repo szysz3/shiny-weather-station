@@ -2,7 +2,7 @@
 
 **shiny-weather-station** is a mix of weather station, alarm clock, clock and photo frame.
 
-**shiny-weather-station** was developed and tested on Raspberry Pi 3 B (backend) and Nexus 7 (client) with Android 6.0.1 (AOSP build with removed SystemUI). 
+**shiny-weather-station** was developed and tested on Raspberry Pi 3 B (backend) and Nexus 7 (client) with Android 6.0.1 (AOSP build with SystemUI removed). 
 
 ### backend (Raspberry Pi 3 B)
 
