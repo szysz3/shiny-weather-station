@@ -84,7 +84,7 @@ web_1                 |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit
 
 > private const val BASE_URL = "[PUT YOUR RPI WEATHER STATION IP HERE]"
 
-e.g `private const val BASE_URL = "http://192.168.137.148:5000"`
+e.g. `private const val BASE_URL = "http://192.168.137.148:5000"`
 
 ## :umbrella: license
 
