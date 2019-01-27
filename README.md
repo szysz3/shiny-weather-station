@@ -1,4 +1,4 @@
-# shiny-weather-station
+# :sunny: shiny-weather-station
 
 **shiny-weather-station** is a mix of weather station, alarm clock, clock and photo frame.
 
@@ -34,7 +34,7 @@ Simple Android app with three modes:
 
 .. and [youtube video.](https://youtu.be/fz_Qo0Fml2M)
 
-## setup
+## :cloud: setup
 
 ### backend
 **1.** make sure you have enabled SPI, I2C if not please do so with:
@@ -86,7 +86,7 @@ web_1                 |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit
 
 e.g `private const val BASE_URL = "http://192.168.137.148:5000"`
 
-## license
+## :umbrella: license
 
 This project is licensed under the MIT license. See the [LICENSE](https://github.com/szysz3/shiny-weather-station/blob/master/LICENSE) file for more info.
 
