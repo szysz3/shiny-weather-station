@@ -85,3 +85,15 @@ web_1                 |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit
 > private const val BASE_URL = "[PUT YOUR RPI WEATHER STATION IP HERE]"
 
 e.g `private const val BASE_URL = "http://192.168.137.148:5000"`
+
+## license
+
+This project is licensed under the MIT license. See the [LICENSE](https://github.com/szysz3/shiny-weather-station/blob/master/LICENSE) file for more info.
+
+### notes
+
+[blurkit](https://github.com/szysz3/shiny-weather-station/tree/master/client/blurkit) module inspired by [blurkit-android](https://github.com/CameraKit/blurkit-android)
+
+[numbertweening](https://github.com/szysz3/shiny-weather-station/tree/master/client/numbertweening) based on [ios-numbertweening](https://github.com/szysz3/ios-numbertweening)
+
+Nova Fitness SDS011 sensor reading based on [sds011](https://gist.github.com/kadamski/92653913a53baf9dd1a8)
