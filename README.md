@@ -56,7 +56,7 @@ git clone -b release/1.0 https://github.com/szysz3/shiny-weather-station.git && 
 nano shiny-weather-station/backend/refresh_weather_conditions/Dockerfile
 ```
 
-> ENV AIRLY_API_KEY=4aa4fc5c25e7420fa0dce08cec2cb322
+> ENV AIRLY_API_KEY=[PUT AIRLY API KEY HERE]
 
 Get Airly API key [here](https://developer.airly.eu/register)
 
